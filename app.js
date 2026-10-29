@@ -266,9 +266,14 @@ async function saveEditor(event){
   const draft=collectEditor();const error=validateEditor(draft);if(error){showFeedback('editor-feedback',error,true);return;}
   const btn=byId('save-editor');btn.disabled=true;btn.textContent='Guardando...';showFeedback('editor-feedback','');
   try{
-    if(isPublic){await publishImages(draft);await backend.writeArticle(draft);}
-    else localStorage.setItem(LOCAL_CONTENT_KEY,JSON.stringify(draft));
-    content=draft;renderArticle();byId('editor-dialog').close();showToast('Cambios guardados correctamente');
+    if(isPublic){
+      await publishImages(draft);
+      content=ensureContent(await backend.writeArticle(draft));
+    }else{
+      localStorage.setItem(LOCAL_CONTENT_KEY,JSON.stringify(draft));
+      content=draft;
+    }
+    renderArticle();byId('editor-dialog').close();showToast('Cambios guardados correctamente');
   }catch(error){showFeedback('editor-feedback',`No se pudo guardar: ${error.message}`,true);}
   finally{btn.disabled=false;btn.textContent='Guardar cambios ✓';}
 }
@@ -339,10 +344,24 @@ async function init(){
     try{
       if(!validHttpUrl(PUBLIC_CONFIG.supabaseUrl))throw new Error('URL de Supabase inválida.');
       const module=await import('./services/public-backend.js');backend=await module.createPublicBackend(PUBLIC_CONFIG);
-      const saved=await backend.readArticle();if(saved)content=ensureContent(saved);
+      const saved=await backend.readArticle();
+      content=saved===null?structuredClone(DEFAULT_CONTENT):ensureContent(saved);
+      renderArticle();
       byId('comment-submit').disabled=false;
-    }catch(error){showFeedback('comment-feedback',`Modo público no disponible: ${error.message}. Revisa config.js y la configuración de Supabase.`,true);byId('refresh-comments').disabled=true;renderArticle();return;}
+      await loadComments();await beginAdmin();
+    }catch(error){
+      const message=`No se pudo cargar o sincronizar el contenido con Supabase: ${error.message}. Revisa config.js, los permisos y la conexión.`;
+      showFeedback('comment-feedback',message,true);
+      assignText('content-load-error',message);
+      byId('content-load-error').hidden=false;
+      byId('articulo').hidden=true;
+      byId('refresh-comments').disabled=true;
+    }finally{
+      document.documentElement.classList.remove('content-loading');
+    }
+    return;
   }else content=ensureContent(safeLocalRead(LOCAL_CONTENT_KEY,DEFAULT_CONTENT));
   renderArticle();await loadComments();await beginAdmin();
+  document.documentElement.classList.remove('content-loading');
 }
 init();

@@ -56,7 +56,8 @@ Requisitos: proyecto Supabase propio (puede comenzar en plan gratuito), conexió
    ```
 
 6. Inicia de nuevo el servidor local. La web leerá/escribirá contenido y comentarios en Supabase. El administrador accede con `?admin=1` y correo/contraseña. Las fotos se suben al bucket `blog-images` protegido por políticas RLS.
-7. Prueba desde **otro navegador** o modo incógnito: un comentario nuevo debe aparecer después de actualizar la lista. En `?admin=1`, prueba **Moderar comentarios → Ocultar → Restaurar**.
+   En modo público, Supabase es la fuente de verdad del artículo: la aplicación consulta la fila con el `articleSlug` configurado, y usa el contenido inicial solo si esa fila todavía no existe. El navegador no usa el contenido de `localStorage` como respaldo público y las solicitudes al API de Supabase evitan reutilizar respuestas HTTP cacheadas. El guardado del editor espera una confirmación con el contenido escrito antes de mostrar éxito.
+7. En `?admin=1`, modifica y guarda el artículo. Después, recarga la página pública y ábrela en otro navegador o modo incógnito para confirmar que aparece la misma versión. Si la lectura de Supabase falla, se muestra un error en lugar de presentar el contenido estático como si fuera el artículo vigente. Prueba también un comentario y **Moderar comentarios → Ocultar → Restaurar**.
 
 **No copies** al código ninguna clave `service_role`, contraseña de base de datos, token secreto ni datos personales. `site_admins` solo debe modificarse desde el panel SQL (o un backend con privilegios). Las políticas RLS protegen contenido, comentarios y fotografías.
 
