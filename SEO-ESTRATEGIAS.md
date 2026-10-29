@@ -4,7 +4,7 @@
 
 | Estrategia | Dónde se implementa | Evidencia / contribución |
 | --- | --- | --- |
-| **SEO 01. Palabras clave** | `index.html` (H1 e introducción); `content.js` y `app.js` (`applySeo`) | **«Boba Tea Piura»** aparece naturalmente en el subtítulo, la introducción y los metadatos, junto con búsquedas relacionadas como «bubble tea en Piura» y «té con tapioca en Piura». |
+| **SEO 01. Palabras clave** | `index.html` (H1, subtítulo e introducción); `content.js` y `app.js` (`applySeo`) | El H1 conserva el título de marca solicitado; **«Boba Tea Piura»** aparece en el subtítulo, la introducción y los metadatos, junto con búsquedas relacionadas como «bubble tea en Piura» y «té con tapioca en Piura». |
 | **SEO 02. Título y metadescripción** | `index.html` `<title>` y `<meta name="description">`; `app.js` `applySeo()` | El title y la descripción presentan Boba Tea Piura, sus sabores y bebidas frescas. El editor permite personalizarlos. |
 | **SEO 03. Encabezados semánticos** | `index.html`, `app.js` `renderArticle()` | Un **único H1**, H2 para secciones principales y H3 para los consejos favorecen lectura y estructura semántica. |
 | **SEO 04. Optimización de imágenes** | `index.html` (ALT, dimensiones, fetchpriority); `app.js` (`compressImage`, `renderArticle`) | La ilustración de bubble tea tiene texto ALT descriptivo y dimensiones explícitas. El editor conserva la opción de reemplazarla; las imágenes secundarias cargan de forma diferida. |
