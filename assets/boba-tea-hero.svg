@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1020" role="img" aria-labelledby="title description">
+  <title id="title">Boba Tea Piura: un mundo de sabores</title>
+  <desc id="description">Dos vasos ilustrados de bubble tea rodeados de frutas, hielo, hojas y perlas de tapioca sobre un fondo colorido.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ffe2ed"/>
+      <stop offset=".52" stop-color="#f0ddff"/>
+      <stop offset="1" stop-color="#d5f4ed"/>
+    </linearGradient>
+    <linearGradient id="pink-drink" x1="0" y1="0" x2=".8" y2="1">
+      <stop stop-color="#ff9fc4"/>
+      <stop offset="1" stop-color="#ef5f94"/>
+    </linearGradient>
+    <linearGradient id="mango-drink" x1="0" y1="0" x2=".8" y2="1">
+      <stop stop-color="#ffe279"/>
+      <stop offset="1" stop-color="#ffa44d"/>
+    </linearGradient>
+    <filter id="shadow" x="-.3" y="-.2" width="1.6" height="1.6">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+  <rect width="900" height="1020" rx="46" fill="url(#background)"/>
+  <path d="M0 690c158-91 265 71 438 4s288-52 462 25v301H0Z" fill="#fff" opacity=".34"/>
+  <circle cx="102" cy="158" r="67" fill="#fff" opacity=".38"/>
+  <circle cx="783" cy="292" r="95" fill="#fff" opacity=".3"/>
+  <g fill="#fff" opacity=".72">
+    <path d="m170 300 14 29 32 4-23 22 6 32-29-16-29 16 6-32-23-22 32-4Z"/>
+    <path d="m724 119 11 22 25 4-18 17 4 25-22-12-22 12 4-25-18-17 25-4Z"/>
+    <circle cx="760" cy="710" r="8"/><circle cx="133" cy="610" r="10"/><circle cx="704" cy="526" r="6"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".8">
+    <path d="m106 436 18-21m-18 21 21 18m568-263 19-17m-19 17 21 18"/>
+  </g>
+  <ellipse cx="451" cy="851" rx="305" ry="61" fill="#744d86" opacity=".16" filter="url(#shadow)"/>
+  <g transform="rotate(-10 326 508)">
+    <path d="m233 239 22-142 29 4-22 148" fill="#80d8ca" stroke="#fff" stroke-width="13" stroke-linejoin="round"/>
+    <path d="m187 294 278-8-27 442q-4 60-62 62l-120 3q-59 1-67-58Z" fill="#fff" stroke="#fff" stroke-width="17" stroke-linejoin="round"/>
+    <path d="m202 468 242-7-17 266q-3 39-41 41l-112 3q-37 1-42-37Z" fill="url(#pink-drink)"/>
+    <path d="m197 315 267-8-8 104-252 7Z" fill="#ffb5d0"/>
+    <path d="m200 415 254-7-4 55-242 7Z" fill="#ddf8f2"/>
+    <g fill="#47304f">
+      <circle cx="263" cy="637" r="20"/><circle cx="316" cy="690" r="21"/><circle cx="376" cy="634" r="19"/><circle cx="414" cy="693" r="18"/><circle cx="264" cy="725" r="16"/>
+    </g>
+    <g fill="#fff" opacity=".9"><circle cx="275" cy="508" r="9"/><circle cx="334" cy="532" r="7"/><circle cx="410" cy="499" r="11"/></g>
+    <path d="M291 574q32 36 66 0" fill="none" stroke="#79375c" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="276" cy="554" r="7" fill="#79375c"/><circle cx="370" cy="548" r="7" fill="#79375c"/>
+    <path d="M197 291q135-23 269 0l-3 30q-133-22-267 1Z" fill="#ffeaf2" stroke="#fff" stroke-width="10"/>
+  </g>
+  <g transform="rotate(9 588 565)">
+    <path d="m587 298 48-145 28 10-48 146" fill="#ffbd58" stroke="#fff" stroke-width="13" stroke-linejoin="round"/>
+    <path d="m462 389 254 3-10 340q-2 49-51 49H528q-50 0-53-49Z" fill="#fff" stroke="#fff" stroke-width="17" stroke-linejoin="round"/>
+    <path d="m475 509 228 3-8 229q-1 27-32 28l-125 1q-31 0-33-29Z" fill="url(#mango-drink)"/>
+    <path d="m465 408 250 3-3 65-246-3Z" fill="#fff0b0"/>
+    <path d="m475 477 231 3-3 31-228-3Z" fill="#d8f6ef"/>
+    <g fill="#47304f">
+      <circle cx="526" cy="656" r="18"/><circle cx="574" cy="711" r="17"/><circle cx="624" cy="650" r="19"/><circle cx="670" cy="708" r="17"/><circle cx="531" cy="729" r="13"/>
+    </g>
+    <path d="M553 595q30 29 59-2" fill="none" stroke="#b65c39" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="543" cy="574" r="6" fill="#7e5138"/><circle cx="625" cy="568" r="6" fill="#7e5138"/>
+    <path d="M465 387q124-14 251 4l-1 27q-124-17-249-3Z" fill="#fff6d5" stroke="#fff" stroke-width="9"/>
+  </g>
+  <g>
+    <circle cx="144" cy="793" r="57" fill="#ff799d"/>
+    <path d="M144 736v114m-57-57h114m-97-40 80 80m0-80-80 80" stroke="#fff4e8" stroke-width="6" opacity=".9"/>
+    <path d="M141 731q-16-26-37-22 10 23 37 22" fill="#65b78e"/>
+    <path d="M763 822c-6-68 30-113 77-135-1 55-22 105-77 135Z" fill="#63b587"/>
+    <path d="M763 822c-45-21-66-56-70-100 44 18 70 50 70 100Z" fill="#8bd4a8"/>
+    <path d="m763 817 61-104m-60 105-59-84" fill="none" stroke="#e8ffe9" stroke-width="5"/>
+    <path d="m757 701 16-39 16 39-16 39Z" fill="#9be5ed" stroke="#fff" stroke-width="5" opacity=".95"/>
+    <path d="m105 500 14-35 14 35-14 35Z" fill="#9be5ed" stroke="#fff" stroke-width="5"/>
+  </g>
+  <g fill="#47304f">
+    <circle cx="204" cy="873" r="12"/><circle cx="247" cy="897" r="9"/><circle cx="688" cy="890" r="12"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-weight="700" text-anchor="middle">
+    <rect x="280" y="80" width="340" height="62" rx="31" fill="#fff" opacity=".88"/>
+    <text x="450" y="119" font-size="24" letter-spacing="3" fill="#702a83">BOBA TEA PIURA</text>
+    <text x="450" y="956" font-size="22" letter-spacing="2" fill="#702a83">SABORES PARA SONREÍR</text>
+  </g>
+</svg>

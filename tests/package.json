@@ -1,0 +1,11 @@
+{
+  "name": "blog-marketing-seo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "start": "python -m http.server 5500"
+  },
+  "description": "Blog de marketing interactivo, editable, con SEO documentado y Supabase opcional"
+}
